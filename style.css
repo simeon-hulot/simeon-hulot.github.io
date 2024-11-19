@@ -1,48 +1,60 @@
 
 
-
-
-
-
 body {
-    background: rgb(246, 245, 245);
+    background: rgb(255, 255, 255);
     color: #000000;
     font-family: Arial, Helvetica, sans-serif;
     
 
 }
 
-.grid-main {
-    display: grid;
-    /* grid-template-columns: 30vw 1fr; */
+p{
+    font-family: "Orbit";
 }
 
+.grid-main {
+    display: grid;
+    
+}
+
+
 h1 {
-    color: rgb(50, 50, 50);
+    font-family: "p22-arts-and-crafts", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(0, 0, 0);
     font-size: 40px;
-    font-size:clamp(16px,5vw,50px);
-    font-weight: normal;
+    font-size:clamp(16px,50vw,50px);    
     margin: 0;
     margin-bottom: 0.1em;
     line-height: 1;
-}       
+}    
 
-.index .grid{
+h2{
+    font-family: "Orbit";
+}
+
+@font-face {
+    font-family: "Orbit";
+    src: url(font/Orbit-Regular.woff2);
+}
+
+.grid{
 
     display: grid;
-    max-width: 1280px;
-    margin: 0 auto;
-    grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
-    justify-content: center;
-    gap: 5px;
-
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 200 px;
+    gap: 24 px;
+    
 }
+
 
 .item-projet{
     display:grid;
     background: #000000;
     text-decoration: none;
 }
+
 
 .item{
     display:grid;
@@ -51,103 +63,59 @@ h1 {
  
 }
 
+
 img{
     max-width: 100%;
     height: auto;
     display: block;
 }
 
+
 .item img{
     width: 100%;
-    height: 100%;
+    height: auto;
+    display: block;
     object-fit: cover;
 }
 
 
   
-  .item>*{
+.item>*{
     grid-column: 1;
     grid-row:1;
     justify-self:center;
     align-self:center;
     color:#fff;
     transition: 0.2s;
-  }
+}
 
-  .item p{
-    font-size: 32px;
+.item p{
+    font-size: 30px;
     opacity:0;
     z-index: 999;
-  }
+}
 
 
-  .item:hover img{
+.item:hover img{
     opacity:0.8;
-  }
+}
 
-  .item:hover p{
+
+.item:hover p{
     opacity:1;
-  }
-
-
-
-
-
-
+}
 
 
 .sticky {
     position: sticky;
     top: 18px;
-
 }
 
-hr {
-    width: auto;
-    height: 2px;
-    align-items: start;
-    background-color: rgba(0, 0, 0, 0.75);
-    border: none
-}
 
 a {
     text-decoration: none;
     color: rgba(0, 0, 0, 0.75);
 }
-
-
-
-
-.gridabout{
-    margin-top: 2.1px;
-    margin-left: 10px;
-}
-
-.gridabout hr {
-    width: auto;
-    border: none;
-    grid-column: 1;
-}
-
-.subtitle{
-    font-size: 20px;
-    font-weight: bold;
-    color: rgba(0, 0, 0, 0.75);
-    grid-column: 1;
-
-}
-
-.date {
-    font-family: "IBM Plex Serif", serif;
-    font-weight: 700;
-    font-style: italic;
-    color: #000000;
-    grid-column: 1;
-}
-
-
-
-
 
 
 @media (min-width:700px) {
